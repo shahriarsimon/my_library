@@ -16,23 +16,23 @@ class BookReadPage extends StatefulWidget {
 }
 
 class _BookReadPageState extends State<BookReadPage> {
-  String _bookContent = 'Loading...';
+  String bookContent = 'Loading...';
 
   @override
   void initState() {
     super.initState();
-    _loadBook();
+    loadBook();
   }
 
-  Future<void> _loadBook() async {
+  Future<void> loadBook() async {
     try {
       final text = await rootBundle.loadString('assets/${widget.fileName}');
       setState(() {
-        _bookContent = text;
+        bookContent = text;
       });
     } catch (e) {
       setState(() {
-        _bookContent = 'Error loading book: ${e.toString()}';
+        bookContent = 'Error loading book: ${e.toString()}';
       });
     }
   }
@@ -55,7 +55,7 @@ class _BookReadPageState extends State<BookReadPage> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Text(
-          _bookContent,
+          bookContent,
           style: const TextStyle(fontSize: 18, height: 1.6),
           textAlign: TextAlign.justify,
         ),

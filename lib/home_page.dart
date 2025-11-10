@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
-              // Drawer Options
+
               buildDrawerItem(Icons.home, "হোম", context),
               buildDrawerItem(Icons.menu_book, "সব গল্প", context, page: BookListPage()),
               buildDrawerItem(Icons.favorite, "পছন্দের বই", context),
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
       ),
 
       body: Container(
-        // 🌄 Background image from network
+
         decoration: BoxDecoration(
           image: DecorationImage(
             image: NetworkImage(
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              // 🔹 Custom AppBar Row
+
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 child: Row(
@@ -104,7 +104,7 @@ class HomePage extends StatelessWidget {
 
               SizedBox(height: 20),
 
-              // 🔹 Welcome text
+
               Text(
                 "স্বাগতম, শাহরিয়ার  !",
                 style: TextStyle(
@@ -135,7 +135,7 @@ class HomePage extends StatelessWidget {
 
               SizedBox(height: 30),
 
-              // 🔹 White section for categories
+
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
@@ -227,7 +227,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // 🔹 Drawer item builder
+
   Widget buildDrawerItem(IconData icon, String title, BuildContext context,
       {Widget? page}) {
     return ListTile(
@@ -248,7 +248,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // 🔹 Helper for category cards
+
   Widget buildCard(IconData icon, String title, Color color) {
     return Container(
       decoration: BoxDecoration(
